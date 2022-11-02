@@ -1,0 +1,23 @@
+- defaults:
+  link:
+    relink: true
+
+- clean: ["~"]
+
+
+- link: 
+  ~/.profile: main_profile
+  ~/.zshrc: zshrc
+  ~/.bashrc: bashrc
+  ~/.condarc: condarc
+  ~/.ssh: ssh
+  ~/.cargo/config: cargo_config
+  ~/.config/lvim/config.lua: lvim_config.lua
+
+- create:
+  - ~/projects
+  - ~/downloads
+  - ~/appimage
+
+- shell
+  - [git submodule update --init --recursive, Installing submodules]
